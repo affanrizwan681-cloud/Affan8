@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    article {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    aside {
+      background: #e2e2e2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; /* Stack items */
+      }
+
+      nav {
+        flex-direction: column; /* Nav links stacked */
+      }
+
+      nav a {
+        text-align: center;
+        border-top: 1px solid #555;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <article>
+      <h2>Welcome</h2>
+      <p>This is a simple responsive website example. Resize the browser window or open on a mobile device to see the layout adjust automatically.</p>
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Some extra content here like news, ads, or widgets.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
